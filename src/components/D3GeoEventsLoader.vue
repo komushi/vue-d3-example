@@ -2,7 +2,7 @@
   <div>
      <d3-geo-events 
       id="01" 
-      topojson-path="https://s3-ap-northeast-1.amazonaws.com/angular-example/tokyo_23_blocks_districts_final.json"
+      topojson-path="static/data/tokyo_23_blocks_districts_final.json"
       :layer-event-data="matrixJson"
       >    
     </d3-geo-events>
@@ -23,14 +23,14 @@ export default {
     };
   },
   mounted() {
-    axios.get("https://s3-ap-northeast-1.amazonaws.com/angular-example/event_data1.json")
+    axios.get("static/data/event_data1.json")
       .then((response)  =>  {
         console.log(response.data.toptenlist);
         this.jsons.push(response.data.toptenlist);
       }, (error)  =>  {
       })
 
-    axios.get("https://s3-ap-northeast-1.amazonaws.com/angular-example/event_data2.json")
+    axios.get("static/data/event_data2.json")
       .then((response)  =>  {
         console.log(response);
         this.jsons.push(response.data.toptenlist);

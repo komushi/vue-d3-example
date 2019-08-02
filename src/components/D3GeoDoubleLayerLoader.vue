@@ -2,7 +2,7 @@
   <div>
     <d3-geo-double-layer 
       id="01" 
-      topojson-path="https://s3-ap-northeast-1.amazonaws.com/angular-example/tokyo_23_blocks_districts_final.json"
+      topojson-path="static/data/tokyo_23_blocks_districts_final.json"
       :layer1-event-data="districtRankList"
       :layer2-event-data="circleData"
       layer1-event-count-tag="dropoffCount"
